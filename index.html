@@ -25,7 +25,7 @@
     </header>
     <main>
         <section class="mt-12 w-11/12 mx-auto mb-24">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-4 ">
 
                 <div class="grid grid-cols-3 gap-4">
 
@@ -33,21 +33,24 @@
                         <figure><img class="w-full" src="images/pic-1.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Lionel Messi</h2>
-                            <button class="btn btn-primary mt-3">SELECT</button>
+                            <button id="added-btn-list" class="btn btn-primary mt-3"
+                                onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
                     <div class="card bg-black shadow-xl">
                         <figure><img class="w-full" src="images/pic-3.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Neymar Jr</h2>
-                            <button class="btn btn-primary mt-3">SELECT</button>
+                            <button id="added-btn-list1" class="btn btn-primary mt-3"
+                                onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
                     <div class="card bg-black shadow-xl">
                         <figure><img class="w-full" src="images/pic-5.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Kylian Mbappé</h2>
-                            <button class="btn btn-primary mt-3">SELECT</button>
+                            <button id="added-btn-list2" class="btn btn-primary mt-3"
+                                onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
                     <div class="card bg-black shadow-xl">
@@ -55,35 +58,40 @@
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Vítor Machado
                             </h2>
-                            <button class="btn btn-primary mt-3">SELECT</button>
+                            <button id="added-btn-list3" class="btn btn-primary mt-3"
+                                onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
                     <div class="card bg-black shadow-xl">
                         <figure><img class="w-full" src="images/pic-8.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Sergio Ramos</h2>
-                            <button class="btn btn-primary mt-3">SELECT</button>
+                            <button id="added-btn-list4" class="btn btn-primary mt-3"
+                                onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
                     <div class="card bg-black shadow-xl">
                         <figure><img class="w-full" src="images/pic-7.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Renato Sanches</h2>
-                            <button class="btn btn-primary mt-3">SELECT</button>
+                            <button id="added-btn-list5" class="btn btn-primary mt-3"
+                                onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
                 </div>
 
-
-                <!-- right side work -->
                 <div class="grid grid-cols-1 gap-5 w-3/4 mx-auto ">
                     <!-- selected list -->
-                    <div class="bg-black">
+                    <div>
                         <h1 class="text-4xl text-white mb-5 text-center pt-5">Selected - V</h1>
                         <hr>
-                        <ul id="places-list" class="text-white">
+                        <div class="overflow-x-auto mt-5">
+                            <table class="table  w-full">
+                                <tbody id="selected-players">
 
-                        </ul>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- Budget part -->
                     <div class="bg-black">
@@ -103,7 +111,7 @@
         <p class="text-white text-center pb-12 pt-12">Copyright @ 2022 All Rights Reserved.
         </p>
     </footer>
-    <script src="js/selected.js"></script>
+    <script src="js/player.js"></script>
 </body>
 
 </html>
