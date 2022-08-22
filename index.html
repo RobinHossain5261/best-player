@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Best Five Player</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body class="bg-slate-900">
@@ -22,84 +24,83 @@
         </div>
     </header>
     <main>
-        <section class="mt-12 w-5/6 mx-auto mb-24">
-            <div class="grid grid-cols-3 gap-5 w-3/4 ">
-                <div class="bg-black border-2 border-gray-600">
-                    <img src="images/pic-1.png" class="w-full" alt="...">
-                    <div class="text-center">
-                        <h5 class="text-3xl font-bold mt-3 mb-3 text-white">Lionel Messi
-                        </h5>
-                        <button id="added-btn-list"
-                            class="text-2xl bg-blue-500 w-3/4 text-white font-samibold  py-1 mb-6">Select</button>
+        <section class="mt-12 w-11/12 mx-auto mb-24">
+            <div class="grid grid-cols-2 gap-4">
+
+                <div class="grid grid-cols-3 gap-4">
+
+                    <div class="card bg-black shadow-xl">
+                        <figure><img class="w-full" src="images/pic-1.png" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-xl font-bold text-center text-white">Lionel Messi</h2>
+                            <button class="btn btn-primary mt-3">SELECT</button>
+                        </div>
+                    </div>
+                    <div class="card bg-black shadow-xl">
+                        <figure><img class="w-full" src="images/pic-3.png" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-xl font-bold text-center text-white">Neymar Jr</h2>
+                            <button class="btn btn-primary mt-3">SELECT</button>
+                        </div>
+                    </div>
+                    <div class="card bg-black shadow-xl">
+                        <figure><img class="w-full" src="images/pic-5.png" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-xl font-bold text-center text-white">Kylian Mbappé</h2>
+                            <button class="btn btn-primary mt-3">SELECT</button>
+                        </div>
+                    </div>
+                    <div class="card bg-black shadow-xl">
+                        <figure><img class="w-full" src="images/pic-2.png" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-xl font-bold text-center text-white">Vítor Machado
+                            </h2>
+                            <button class="btn btn-primary mt-3">SELECT</button>
+                        </div>
+                    </div>
+                    <div class="card bg-black shadow-xl">
+                        <figure><img class="w-full" src="images/pic-8.png" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-xl font-bold text-center text-white">Sergio Ramos</h2>
+                            <button class="btn btn-primary mt-3">SELECT</button>
+                        </div>
+                    </div>
+                    <div class="card bg-black shadow-xl">
+                        <figure><img class="w-full" src="images/pic-7.png" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title text-xl font-bold text-center text-white">Renato Sanches</h2>
+                            <button class="btn btn-primary mt-3">SELECT</button>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-black border-2 border-gray-600">
-                    <img src="images/pic-6.png" class="w-full" alt="...">
-                    <div class="text-center">
-                        <h5 class="text-3xl font-bold mt-3 mb-3 text-white">Neymar Jr
-                        </h5>
-                        <button id="added-btn-list1"
-                            class="text-2xl bg-blue-500 w-3/4 text-white font-samibold  py-1 mb-6">Select</button>
+
+
+                <!-- right side work -->
+                <div class="grid grid-cols-1 gap-5 w-3/4 mx-auto ">
+                    <!-- selected list -->
+                    <div class="bg-black">
+                        <h1 class="text-4xl text-white mb-5 text-center pt-5">Selected - V</h1>
+                        <hr>
+                        <ul id="places-list" class="text-white">
+
+                        </ul>
                     </div>
-                </div>
-                <div class="bg-black border-2 border-gray-600">
-                    <img src="images/pic-10.png" class="w-full" alt="...">
-                    <div class="text-center">
-                        <h5 class="text-3xl font-bold mt-3 mb-3 text-white">Kylian Mbappé
-                        </h5>
-                        <button id="added-btn-list2"
-                            class="text-2xl bg-blue-500 w-3/4 text-white font-samibold  py-1 mb-6">Select</button>
-                    </div>
-                </div>
-                <div class="bg-black border-2 border-gray-600">
-                    <img src="images/pic-2.png" class="w-full" alt="...">
-                    <div class="text-center">
-                        <h5 class="text-3xl font-bold mt-3 mb-3 text-white">Vítor Machado
-                        </h5>
-                        <button id="added-btn-list3"
-                            class="text-2xl bg-blue-500 w-3/4 text-white font-samibold  py-1 mb-6">Select</button>
-                    </div>
-                </div>
-                <div class="bg-black border-2 border-gray-600">
-                    <img src="images/pic-8.png" class="w-full" alt="...">
-                    <div class="text-center">
-                        <h5 class="text-3xl font-bold mt-3 mb-3 text-white">Sergio Ramos
-                        </h5>
-                        <button id="added-btn-list4"
-                            class="text-2xl bg-blue-500 w-3/4 text-white font-samibold  py-1 mb-6">Select</button>
-                    </div>
-                </div>
-                <div class="bg-black border-2 border-gray-600">
-                    <img src="images/pic-4.png" class="w-full" alt="...">
-                    <div class="text-center">
-                        <h5 class="text-3xl font-bold mt-3 mb-3 text-white">Renato Sanches
-                        </h5>
-                        <button id="added-btn-list5"
-                            class="text-2xl bg-blue-500 w-3/4 text-white font-samibold  py-1 mb-6">Select</button>
+                    <!-- Budget part -->
+                    <div class="bg-black">
+                        <h1 class="text-4xl text-white mb-5 text-center pt-5">Budget</h1>
+                        <hr>
+
                     </div>
                 </div>
             </div>
 
-            <!-- selected list -->
-            <div class="grid grid-cols-1 gap-5 w-1/4 ">
-                <h1 class="text-4xl text-white">Selected - V</h1>
-                <hr>
-                <ul id="places-list" class="text-white">
 
-                </ul>
-            </div>
-            <!-- Budget part -->
-            <div class="grid grid-cols-1 gap-5 w-1/4 ">
-                <h1 class="text-4xl text-white">Budget</h1>
-                <hr>
-
-            </div>
         </section>
 
     </main>
     <hr>
     <footer>
-        <p class="text-white text-center mb-12 mt-12">Copyright @ 2022 All Rights Reserved.
+        <p class="text-white text-center pb-12 pt-12">Copyright @ 2022 All Rights Reserved.
         </p>
     </footer>
     <script src="js/selected.js"></script>
