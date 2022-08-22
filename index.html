@@ -29,7 +29,7 @@
 
                 <div class="grid grid-cols-3 gap-4">
 
-                    <div class="card bg-black shadow-xl">
+                    <div class="card bg-black shadow-xl h-80">
                         <figure><img class="w-full" src="images/pic-1.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Lionel Messi</h2>
@@ -37,7 +37,7 @@
                                 onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
-                    <div class="card bg-black shadow-xl">
+                    <div class="card bg-black shadow-xl h-80">
                         <figure><img class="w-full" src="images/pic-3.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Neymar Jr</h2>
@@ -45,7 +45,7 @@
                                 onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
-                    <div class="card bg-black shadow-xl">
+                    <div class="card bg-black shadow-xl h-80">
                         <figure><img class="w-full" src="images/pic-5.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Kylian Mbappé</h2>
@@ -53,7 +53,7 @@
                                 onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
-                    <div class="card bg-black shadow-xl">
+                    <div class="card bg-black shadow-xl h-80">
                         <figure><img class="w-full" src="images/pic-2.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Vítor Machado
@@ -62,7 +62,7 @@
                                 onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
-                    <div class="card bg-black shadow-xl">
+                    <div class="card bg-black shadow-xl h-80">
                         <figure><img class="w-full" src="images/pic-8.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Sergio Ramos</h2>
@@ -70,7 +70,7 @@
                                 onclick="addToCart(this)">SELECT</button>
                         </div>
                     </div>
-                    <div class="card bg-black shadow-xl">
+                    <div class="card bg-black shadow-xl h-80">
                         <figure><img class="w-full" src="images/pic-7.png" /></figure>
                         <div class="card-body">
                             <h2 class="card-title text-xl font-bold text-center text-white">Renato Sanches</h2>
@@ -82,11 +82,11 @@
 
                 <div class="grid grid-cols-1 gap-5 w-3/4 mx-auto ">
                     <!-- selected list -->
-                    <div>
-                        <h1 class="text-4xl text-white mb-5 text-center pt-5">Selected - V</h1>
+                    <div class="bg-black pb-2">
+                        <h1 class="text-3xl text-white mb-5 text-center pt-5">Selected - V</h1>
                         <hr>
-                        <div class="overflow-x-auto mt-5">
-                            <table class="table  w-full">
+                        <div class=" mt-5">
+                            <table class="w-full text-white">
                                 <tbody id="selected-players">
 
                                 </tbody>
@@ -94,15 +94,33 @@
                         </div>
                     </div>
                     <!-- Budget part -->
-                    <div class="bg-black">
-                        <h1 class="text-4xl text-white mb-5 text-center pt-5">Budget</h1>
+                    <div class="bg-black p-3">
+                        <h1 class="text-3xl text-white mb-3 text-center">Budget</h1>
                         <hr>
-
+                        <div class="flex mt-3">
+                            <h3 class="text-xl text-white mr-5">Per Player</h3>
+                            <input id="per-player-budget" type="text">
+                        </div>
+                        <button id="player-budget-btn"
+                            class="bg-blue-600 text-white p-2 font-bold w-full mt-5 ">Calculate</button>
+                        <h3 class="text-xl text-white mr-5 mt-3">Player Expenses $<span id="player-expenses">0</span>
+                        </h3>
+                        <div class="flex mt-3">
+                            <h3 class="text-xl text-white mr-5">Manager</h3>
+                            <input id="manager-budget" type="text">
+                        </div>
+                        <div class="flex mt-3">
+                            <h3 class="text-xl text-white mr-5 ">Coach</h3>
+                            <input class="ml-6" id="coach-budget" type="text">
+                        </div>
+                        <button id="all-budget-btn" class="bg-blue-600 text-white p-2 font-bold w-full mt-5 ">All
+                            Calculate</button>
+                        <h3 class="text-xl text-white  mr-5 mt-3">Total Amount : <span class="text-red-400"> $<span
+                                    id="total-expenses">0</span></span>
+                        </h3>
                     </div>
                 </div>
             </div>
-
-
         </section>
 
     </main>
@@ -112,6 +130,7 @@
         </p>
     </footer>
     <script src="js/player.js"></script>
+    <script src="js/budget.js"></script>
 </body>
 
 </html>

@@ -31,8 +31,8 @@ function addToCart(element) {
 
 }
 
-
 //disabled button
+
 const button = document.querySelector('#added-btn-list');
 const disableButton = () => {
     button.disabled = true;
