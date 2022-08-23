@@ -1,3 +1,12 @@
+//common function
+
+function updateBudgetCost(elementId) {
+    const InputBudgetField = document.getElementById(elementId);
+    const inputCostString = InputBudgetField.value;
+    const inputCost = parseFloat(inputCostString);
+    return inputCost;
+}
+
 
 document.getElementById('player-budget-btn').addEventListener('click', function () {
     const perPlayerInputField = document.getElementById('per-player-budget');
@@ -5,9 +14,7 @@ document.getElementById('player-budget-btn').addEventListener('click', function 
     const perPlayerCost = parseFloat(perPlayerCostString);
 
     const selectedPlayerElement = document.getElementById('selected-players');
-
     const selectedPlayerNumber = selectedPlayerElement.children.length;
-
     const selectedPlayerCost = perPlayerCost * selectedPlayerNumber;
 
     const playerExpensesElement = document.getElementById('player-expenses');
@@ -21,13 +28,8 @@ document.getElementById('player-budget-btn').addEventListener('click', function 
 })
 
 document.getElementById('all-budget-btn').addEventListener('click', function () {
-    const managerInputField = document.getElementById('manager-budget');
-    const managerCostString = managerInputField.value;
-    const managerCost = parseFloat(managerCostString);
-
-    const coachInputField = document.getElementById('coach-budget');
-    const coachCostString = coachInputField.value;
-    const coachCost = parseFloat(coachCostString);
+    const managerCost = updateBudgetCost('manager-budget');
+    const coachCost = updateBudgetCost('coach-budget');
 
     const totalExpensesElement = document.getElementById('total-expenses');
     const totalExpensesString = totalExpensesElement.innerText;
